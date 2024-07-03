@@ -62,6 +62,9 @@ struct ContentView: View {
                 Section("how much money each one should pay"){
                     Text(totapPerPerson,format:.currency(code:Locale.current.currency?.identifier ?? "USD"))
                 }
+                Section("how much money each one should pay"){
+                    Text(totapPerPerson,format:.currency(code:Locale.current.currency?.identifier ?? "USD"))
+                }
             }
             .navigationTitle("WeSplit").toolbar{
                 if amountIsFocused{
