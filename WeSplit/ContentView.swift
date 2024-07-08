@@ -29,51 +29,24 @@ struct ContentView: View {
     
 
     var body: some View {
-       
         
-        NavigationStack{
-            Form {
-                Section("how much money on the bill"){
-                    
-                    TextField("Amount",value: $checkAmount,format:.currency(code:Locale.current.currency?.identifier ?? "USD"))
-                        .keyboardType(.decimalPad)
-                        .focused($amountIsFocused)
-                }
+        
+        TabView{
+            NavigationStack{
+                SplitView()
                 
-                
-                Section("how many people do you have"){
-                    Picker("numberOfPeople",selection: $numberOfPeople){
-                        ForEach(2..<100){
-                            Text("\($0) people")
-                        }
-                    }.pickerStyle(.navigationLink)
-                }
-                        
-                
-                
-                Section("how much tip do you wang to leave?"){
-                    Picker("Tip percentage",selection: $tipPercentage){
-                        ForEach(tipPercentages,id:\.self){
-                            Text($0,format:.percent)
-                        }
-                    }.pickerStyle(.segmented)
-                }
-                
-                Section("how much money each one should pay"){
-                    Text(totapPerPerson,format:.currency(code:Locale.current.currency?.identifier ?? "USD"))
-                }
-                Section("how much money each one should pay"){
-                    Text(totapPerPerson,format:.currency(code:Locale.current.currency?.identifier ?? "USD"))
-                }
-            }
-            .navigationTitle("WeSplit").toolbar{
-                if amountIsFocused{
-                    Button("Done"){
-                        amountIsFocused = false
-                    }
-                }
-            }
+            }.tabItem { Label("WeSplit",systemImage: "") }
+            
+            NavigationStack{
+                GuessFlagView()
+            }.tabItem { Label("GuessFlag", image: "flag") }
+            
+            Text("first").tabItem {Text("Home")}
+            Text("second").tabItem {Text("me")}
+            
         }
+        
+        
 
     }
 }
@@ -81,3 +54,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+            

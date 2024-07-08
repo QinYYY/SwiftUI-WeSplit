@@ -13,7 +13,9 @@ struct TestView: View {
     @State private var tapCount = 0
     @State private var name = ""
     
+    
     var body: some View {
+//        day one
         NavigationStack{
             Form{
                 Text("this is a form")
@@ -45,6 +47,9 @@ struct TestView: View {
             .navigationTitle("SwiftUI")
             .navigationBarTitleDisplayMode(.automatic)
         }
+        
+//        day two
+        
     }
     
 }
