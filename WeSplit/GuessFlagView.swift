@@ -17,6 +17,8 @@ struct GuessFlagView: View {
     @State private var scoresTitle = ""
     @State private var alertMsg = ""
     
+    
+    
     var body: some View {
         
         ZStack{
