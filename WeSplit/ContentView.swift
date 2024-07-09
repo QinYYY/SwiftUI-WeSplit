@@ -35,19 +35,15 @@ struct ContentView: View {
             NavigationStack{
                 SplitView()
                 
-            }.tabItem { Label("WeSplit",systemImage: "") }
+            }.tabItem { Label("WeSplit",systemImage: "pencil") }
             
             NavigationStack{
                 GuessFlagView()
-            }.tabItem { Label("GuessFlag", image: "flag") }
-            
-            Text("first").tabItem {Text("Home")}
-            Text("second").tabItem {Text("me")}
-            
+            }.tabItem { Label("GuessFlag", systemImage: "flag") }
+            NavigationStack{
+                BetterSleepView()
+            }.tabItem { Label("BetterSleep",systemImage: "circle") }
         }
-        
-        
-
     }
 }
 

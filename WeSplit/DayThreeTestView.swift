@@ -9,42 +9,37 @@ import SwiftUI
 
 struct DayThreeTestView: View {
     @State private var useRedText = false
+    @State private var sleepAmount = 8.0
+    @State private var wakeUp = Date.now
     var body: some View {
-        VStack{
-            CapculeText(text: "11111").font(.largeTitle)
-            CapculeText(text: "22222").blur(radius: 2)
-            CapculeText(text: "44444")
-//                .padding()
-//                .background(.red)
-//                .padding()
-//                .background(.yellow)
-//                .padding()
-//                .background(.blue)
-//                .padding()
-//                .background(.green)
-        }
-        .frame(maxWidth: .infinity)
-        .font(.title)
-        .background(.mint)
-        .blur(radius: 1)
-        
-        
-        VStack{
-            Button("tap"){
-                useRedText.toggle()
+        ScrollView{
+            VStack{
+                CapculeText(text: "11111").font(.largeTitle)
+                Button("tap"){
+                    useRedText.toggle()
+                }
+                .frame(width: 200,height: 200)
+                .background(useRedText ? .red : .blue)
+                .waterMarked(with: "nihao")
+                .frame(maxWidth: .infinity,minHeight: 300)
+                .background(.gray)
+                
             }
-            .frame(width: 200,height: 200)
-            .background(useRedText ? .red : .blue)
-        }
-        .waterMarked(with: "nihao")
-        .frame(maxWidth: .infinity,minHeight: 300)
-        .background(.gray)
-        VStack {
+            .frame(maxWidth: .infinity)
+            .font(.title)
+            .background(.mint)
+            .blur(radius: 1)
             CustomGridView()
+            
+            
+            VStack {
+                Stepper("\(sleepAmount.formatted()) hours",value: $sleepAmount,in: 4...12,step: 0.25)
+                DatePicker("", selection: $wakeUp,in: Date.now..., displayedComponents: .hourAndMinute)
+                    .labelsHidden()
+                Text(Date.now,format: .dateTime.day().month().year())
+                Text(Date.now.formatted(date: .long, time: .shortened))
+            }
         }
-        .background(.gray)
-        
-        
         
     }
 

@@ -16,6 +16,9 @@
 		B2ED63482C364CC500C28425 /* GuessFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED63472C364CC500C28425 /* GuessFlagView.swift */; };
 		B2ED634A2C366E3000C28425 /* DayTwoTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED63492C366E3000C28425 /* DayTwoTestView.swift */; };
 		B2ED634C2C3B6CA100C28425 /* DayThreeTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED634B2C3B6CA100C28425 /* DayThreeTestView.swift */; };
+		B2ED634E2C3CAE1F00C28425 /* BetterSleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED634D2C3CAE1F00C28425 /* BetterSleepView.swift */; };
+		B2ED63502C3CB61800C28425 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED634F2C3CB61800C28425 /* ExtensionView.swift */; };
+		B2ED63522C3CBEA600C28425 /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B2ED63512C3CBEA600C28425 /* SleepCalculator.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		B2ED63472C364CC500C28425 /* GuessFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessFlagView.swift; sourceTree = "<group>"; };
 		B2ED63492C366E3000C28425 /* DayTwoTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTwoTestView.swift; sourceTree = "<group>"; };
 		B2ED634B2C3B6CA100C28425 /* DayThreeTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayThreeTestView.swift; sourceTree = "<group>"; };
+		B2ED634D2C3CAE1F00C28425 /* BetterSleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterSleepView.swift; sourceTree = "<group>"; };
+		B2ED634F2C3CB61800C28425 /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
+		B2ED63512C3CBEA600C28425 /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +71,14 @@
 				B201D5312C32C2FA00E847D3 /* ContentView.swift */,
 				B2ED63452C36254F00C28425 /* SplitView.swift */,
 				B2ED63472C364CC500C28425 /* GuessFlagView.swift */,
+				B2ED634D2C3CAE1F00C28425 /* BetterSleepView.swift */,
+				B2ED63512C3CBEA600C28425 /* SleepCalculator.mlmodel */,
 				B201D5412C34D3FE00E847D3 /* TestView.swift */,
 				B2ED63492C366E3000C28425 /* DayTwoTestView.swift */,
 				B2ED634B2C3B6CA100C28425 /* DayThreeTestView.swift */,
 				B201D5332C32C2FD00E847D3 /* Assets.xcassets */,
 				B201D5352C32C2FD00E847D3 /* Preview Content */,
+				B2ED634F2C3CB61800C28425 /* ExtensionView.swift */,
 			);
 			path = WeSplit;
 			sourceTree = "<group>";
@@ -153,7 +162,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B201D5422C34D3FE00E847D3 /* TestView.swift in Sources */,
+				B2ED63502C3CB61800C28425 /* ExtensionView.swift in Sources */,
+				B2ED63522C3CBEA600C28425 /* SleepCalculator.mlmodel in Sources */,
 				B2ED63462C36254F00C28425 /* SplitView.swift in Sources */,
+				B2ED634E2C3CAE1F00C28425 /* BetterSleepView.swift in Sources */,
 				B2ED634A2C366E3000C28425 /* DayTwoTestView.swift in Sources */,
 				B201D5322C32C2FA00E847D3 /* ContentView.swift in Sources */,
 				B2ED63482C364CC500C28425 /* GuessFlagView.swift in Sources */,
