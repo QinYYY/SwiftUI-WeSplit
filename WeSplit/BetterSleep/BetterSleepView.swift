@@ -42,6 +42,7 @@ struct BetterSleepView: View {
                             
                             
                     }
+                    .padding(10)
                     .customBackColor()
                     .customCorner()
                     
@@ -69,7 +70,9 @@ struct BetterSleepView: View {
                             
                         }
                             
-                    }.customBackColor().customCorner()
+                    }
+                    .padding(10)
+                    .customBackColor().customCorner()
                     
                 }
                 .scrollContentBackground(.hidden)
