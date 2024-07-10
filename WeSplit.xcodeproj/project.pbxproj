@@ -19,6 +19,9 @@
 		B2ED634E2C3CAE1F00C28425 /* BetterSleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED634D2C3CAE1F00C28425 /* BetterSleepView.swift */; };
 		B2ED63502C3CB61800C28425 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED634F2C3CB61800C28425 /* ExtensionView.swift */; };
 		B2ED63522C3CBEA600C28425 /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B2ED63512C3CBEA600C28425 /* SleepCalculator.mlmodel */; };
+		B2ED63552C3D19C800C28425 /* WordScramble.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED63542C3D19C800C28425 /* WordScramble.swift */; };
+		B2ED63572C3D19ED00C28425 /* DayFourTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED63562C3D19ED00C28425 /* DayFourTestView.swift */; };
+		B2ED63592C3E0FF800C28425 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = B2ED63582C3E0FF700C28425 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		B2ED634D2C3CAE1F00C28425 /* BetterSleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterSleepView.swift; sourceTree = "<group>"; };
 		B2ED634F2C3CB61800C28425 /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 		B2ED63512C3CBEA600C28425 /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
+		B2ED63542C3D19C800C28425 /* WordScramble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScramble.swift; sourceTree = "<group>"; };
+		B2ED63562C3D19ED00C28425 /* DayFourTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayFourTestView.swift; sourceTree = "<group>"; };
+		B2ED63582C3E0FF700C28425 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +73,12 @@
 		B201D52E2C32C2FA00E847D3 /* WeSplit */ = {
 			isa = PBXGroup;
 			children = (
+				B2ED635A2C3E100300C28425 /* BetterSleep */,
+				B2ED63532C3D199C00C28425 /* WordScramble */,
 				B201D52F2C32C2FA00E847D3 /* WeSplitApp.swift */,
 				B201D5312C32C2FA00E847D3 /* ContentView.swift */,
 				B2ED63452C36254F00C28425 /* SplitView.swift */,
 				B2ED63472C364CC500C28425 /* GuessFlagView.swift */,
-				B2ED634D2C3CAE1F00C28425 /* BetterSleepView.swift */,
-				B2ED63512C3CBEA600C28425 /* SleepCalculator.mlmodel */,
 				B201D5412C34D3FE00E847D3 /* TestView.swift */,
 				B2ED63492C366E3000C28425 /* DayTwoTestView.swift */,
 				B2ED634B2C3B6CA100C28425 /* DayThreeTestView.swift */,
@@ -89,6 +95,25 @@
 				B201D5362C32C2FD00E847D3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B2ED63532C3D199C00C28425 /* WordScramble */ = {
+			isa = PBXGroup;
+			children = (
+				B2ED63582C3E0FF700C28425 /* start.txt */,
+				B2ED63542C3D19C800C28425 /* WordScramble.swift */,
+				B2ED63562C3D19ED00C28425 /* DayFourTestView.swift */,
+			);
+			path = WordScramble;
+			sourceTree = "<group>";
+		};
+		B2ED635A2C3E100300C28425 /* BetterSleep */ = {
+			isa = PBXGroup;
+			children = (
+				B2ED634D2C3CAE1F00C28425 /* BetterSleepView.swift */,
+				B2ED63512C3CBEA600C28425 /* SleepCalculator.mlmodel */,
+			);
+			path = BetterSleep;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B201D5372C32C2FD00E847D3 /* Preview Assets.xcassets in Resources */,
+				B2ED63592C3E0FF800C28425 /* start.txt in Resources */,
 				B201D5342C32C2FD00E847D3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,9 +192,11 @@
 				B2ED63522C3CBEA600C28425 /* SleepCalculator.mlmodel in Sources */,
 				B2ED63462C36254F00C28425 /* SplitView.swift in Sources */,
 				B2ED634E2C3CAE1F00C28425 /* BetterSleepView.swift in Sources */,
+				B2ED63552C3D19C800C28425 /* WordScramble.swift in Sources */,
 				B2ED634A2C366E3000C28425 /* DayTwoTestView.swift in Sources */,
 				B201D5322C32C2FA00E847D3 /* ContentView.swift in Sources */,
 				B2ED63482C364CC500C28425 /* GuessFlagView.swift in Sources */,
+				B2ED63572C3D19ED00C28425 /* DayFourTestView.swift in Sources */,
 				B2ED634C2C3B6CA100C28425 /* DayThreeTestView.swift in Sources */,
 				B201D5302C32C2FA00E847D3 /* WeSplitApp.swift in Sources */,
 			);

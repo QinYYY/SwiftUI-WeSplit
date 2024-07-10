@@ -43,6 +43,9 @@ struct ContentView: View {
             NavigationStack{
                 BetterSleepView()
             }.tabItem { Label("BetterSleep",systemImage: "circle") }
+            NavigationStack{
+                WordScramble()
+            }.tabItem { Label("WordScramble",systemImage: "4.circle") }
         }
     }
 }

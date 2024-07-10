@@ -17,6 +17,11 @@ struct GuessFlagView: View {
     @State private var scoresTitle = ""
     @State private var alertMsg = ""
     
+    @State private var degrees = 0.0
+    
+    @State private var tappedButton :Int? = nil
+    @State private var opacity = 1.0
+    @State private var opacity1 = 0.25
     
     
     var body: some View {
@@ -37,6 +42,18 @@ struct GuessFlagView: View {
                 }
                 ForEach(0..<3){number in
                     Button{
+                        
+                        tappedButton = number
+                            
+                    //MARK: - challenge
+                        withAnimation(.spring(duration: 1,bounce: 0.8)){
+                            if let tappedButton = tappedButton {
+                                degrees += 360
+                            }else{
+                                opacity = 0.25
+                            }
+                        }
+                        
                        flagTapped(number)
                     }label: {
                         Image(countries[number])
@@ -44,12 +61,21 @@ struct GuessFlagView: View {
                             .clipShape(.rect(cornerRadius: 10))
                             .shadow(radius: 5)
                             .padding()
+                        //MARK: - challenge
+                            .rotation3DEffect(
+                                .degrees(tappedButton == number ? degrees : 0),axis: (x: 0.0, y: 1.0, z: 0.0))
+                            .opacity(tappedButton == nil || tappedButton == number ? 1.0 : 0.25)
+                            .animation(.easeInOut(duration: 1), value:tappedButton)
+                        
+                            
                     }
                     .alert(scoresTitle, isPresented: $showingAlert){
                         Button("Continue",action: askQuestion)
                     } message: {
                         Text(alertMsg)
                     }
+                    
+                    
                 }
                 .frame(maxWidth: .infinity)
                 .background(.regularMaterial)
@@ -61,7 +87,9 @@ struct GuessFlagView: View {
         }.ignoresSafeArea()
     }
     func flagTapped(_ number :Int){
-        print("\(number)")
+
+        print(number)
+        
         if number == correctAnswer {
             scoresTitle = "Correct"
             alertMsg = "you get 30 points"
@@ -71,7 +99,8 @@ struct GuessFlagView: View {
             alertMsg = "you foolish"
         }
         showingAlert = true
-            
+        degrees = 0
+        
     }
     func askQuestion(){
         countries.shuffle()
