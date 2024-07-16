@@ -46,6 +46,9 @@ struct ContentView: View {
             NavigationStack{
                 WordScramble()
             }.tabItem { Label("WordScramble",systemImage: "4.circle") }
+            NavigationStack{
+                MoonShotView()
+            }.tabItem { Label("MoonShot",systemImage: "5.circle") }
         }
     }
 }
